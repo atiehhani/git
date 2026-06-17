@@ -55,14 +55,14 @@ git remote -v
 cd /root/lotus
 ```
 ایجاد یک Repository محلی Git
-
 بعد از اجرای این دستور، یک پوشه مخفی .git ساخته می‌شود.این پوشه تمام تاریخچه Commitها و تنظیمات Git را نگهداری می‌کند.
 ```bash
 git init
 ```
-تعریف Remote Repository - به Git می‌گویید:
-مخزن اصلی من در GitLab این آدرس است.
-برای مشاهده: git remote -v
+تعریف Remote Repository - به Git می‌گویید: مخزن اصلی من در GitLab این آدرس است. برای مشاهده: 
+```bash
+git remote -v
+```
 ```bash
 git remote add origin https://192.168.243.9/usa/OV_List.git
 ```
