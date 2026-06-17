@@ -59,6 +59,13 @@ cd /root/lotus
 ```bash
 git init
 ```
+ست کردن یوزر برای ثبت کردن commit ها   
+ Set git user identity (IMPORTANT)   
+ ```bash
+sudo git config --global user.email "your-email@example.com"
+sudo git config --global user.name "Your Name"
+```
+
 تعریف Remote Repository - به Git می‌گویید: مخزن اصلی من در GitLab این آدرس است. برای مشاهده: 
 ```bash
 git remote -v
