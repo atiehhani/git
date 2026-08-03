@@ -8,7 +8,7 @@ GITLAB_URL="http://192.168.251.219"
 # Available statuses: created, pending, running, failed, success, canceled, skipped, manual, scheduled
 STATUSES=("created" "pending" "running" "failed" "success" "canceled")
 
-echo "í ½í´ Finding pipelines with statuses: ${STATUSES[*]}"
+echo "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Finding pipelines with statuses: ${STATUSES[*]}"
 echo ""
 
 # Function to get all pipeline IDs for a specific status
@@ -64,7 +64,7 @@ for status in "${STATUSES[@]}"; do
 done
 
 echo ""
-echo "í ½í³Š Total pipelines found: $total_all"
+echo "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Total pipelines found: $total_all"
 
 if [ "$total_all" -eq 0 ]; then
   echo "âŒ No pipelines found with any of the specified statuses"
@@ -73,7 +73,7 @@ fi
 
 # Show summary of what will be deleted
 echo ""
-echo "í ½í³‹ Summary of pipelines to delete:"
+echo "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Summary of pipelines to delete:"
 for status in "${STATUSES[@]}"; do
   if [ -n "${status_pipelines[$status]}" ]; then
     count=$(echo "${status_pipelines[$status]}" | grep -c .)
@@ -90,7 +90,7 @@ if [[ $confirm != [yY] && $confirm != [yY][eE][sS] ]]; then
 fi
 
 echo ""
-echo "í ½í·‘ï¸  Deleting pipelines..."
+echo "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¸  Deleting pipelines..."
 deleted=0
 failed=0
 
@@ -101,7 +101,7 @@ for status in "${STATUSES[@]}"; do
   fi
   
   echo ""
-  echo "  í ½í³Œ Deleting $status pipelines..."
+  echo "  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Deleting $status pipelines..."
   
   echo "${status_pipelines[$status]}" | while read -r id; do
     if [ -z "$id" ]; then
