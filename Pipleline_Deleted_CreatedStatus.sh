@@ -1,8 +1,8 @@
 #!/bin/bash
 
-TOKEN="glpat-z_k3smStFg5U9-PyeKOl0G86MQp1OjEH.01.0w1un828g"
+TOKEN="XXXX"
 PROJECT_ID="12"
-GITLAB_URL="http://192.168.251.219"
+GITLAB_URL="http://192.168.X.X"
 
 echo "������ Finding all 'created' pipelines (including paginated results)..."
 
