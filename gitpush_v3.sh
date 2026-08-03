@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Configuration
-GITLAB_URL="https://192.168.243.9/usa/OV_List.git"
+GITLAB_URL="https://192.168.X.X/usa/OV_List.git"
 GITLAB_USERNAME="usa"
-#GITLAB_PASSWORD='E$DmAp@uLCP_1404'  # Use single quotes to avoid $ expansion
-GITLAB_TOKEN="glpat-WS3MdXTp6fBzbGLTkVRsJG86MQp1OjEH.01.0w1mia0g4"
+#GITLAB_PASSWORD='XXXX'  # Use single quotes to avoid $ expansion
+GITLAB_TOKEN="XXXX"
 LOCAL_PATH="/root/lotus"
 BRANCH="master"
 COMMIT_MESSAGE="Force replace - $(date '+%Y-%m-%d %H:%M:%S')"
@@ -22,7 +22,7 @@ git config --global --unset credential.helper
 git config --global credential.helper store
 
 # Use the FULL URL (without the protocol part in the file)
-echo "https://${GITLAB_USERNAME}:${GITLAB_TOKEN}@192.168.243.9" > ~/.git-credentials
+echo "https://${GITLAB_USERNAME}:${GITLAB_TOKEN}@192.168.X.X" > ~/.git-credentials
 
 # Navigate to local directory
 cd $LOCAL_PATH || { echo -e "${RED}Error: Cannot access $LOCAL_PATH${NC}"; exit 1; }
@@ -64,13 +64,13 @@ else
     echo -e "${YELLOW}Alternative: Try pushing with embedded credentials...${NC}"
     
     # Alternative method - embed credentials directly in URL
-    git push -u "https://${GITLAB_USERNAME}:${GITLAB_TOKEN}@192.168.243.9/usa/OV_List.git" $BRANCH --force
+    git push -u "https://${GITLAB_USERNAME}:${GITLAB_TOKEN}@192.168.X.X/usa/OV_List.git" $BRANCH --force
     
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}SUCCESS with embedded credentials!${NC}"
     else
         echo -e "${RED}Still failing. Check if:${NC}"
-        echo "1. GitLab server is accessible: curl -k https://192.168.243.9"
+        echo "1. GitLab server is accessible: curl -k https://192.168.X.X"
         echo "2. Username/password is correct"
         echo "3. You have push permissions"
         exit 1
