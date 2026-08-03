@@ -6,11 +6,11 @@ set -euo pipefail
 # Configuration
 # =========================
 
-GITLAB_URL="https://192.168.243.9/usa/OV_List.git"
+GITLAB_URL="https://192.168.X.X/usa/OV_List.git"
 GITLAB_USERNAME="usa"
-GITLAB_TOKEN="glpat-751Ua7psb4k-7S0uVoG19W86MQp1OjEH.01.0w0xir448"
+GITLAB_TOKEN="XXXX"
 
-LOCAL_PATH="/root/lotus"
+LOCAL_PATH="/root/hani"
 BRANCH="master"
 
 COMMIT_MESSAGE="Automated update - $(date '+%Y-%m-%d %H:%M:%S')"
@@ -33,7 +33,7 @@ echo -e "${YELLOW}Starting GitLab push...${NC}"
 git config --global credential.helper store
 
 cat > ~/.git-credentials << EOF
-https://${GITLAB_USERNAME}:${GITLAB_TOKEN}@192.168.243.9
+https://${GITLAB_USERNAME}:${GITLAB_TOKEN}@192.168.X.X
 EOF
 
 chmod 600 ~/.git-credentials
