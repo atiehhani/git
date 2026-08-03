@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # --- Configuration ---
-GITLAB_HOST="https://192.168.243.9"
-GITLAB_TOKEN="glpat-k0uYhjJ7S2z9g-jgPIOAY286MQp1OjEH.01.0w1tqgt8n"  # REPLACE THIS WITH YOUR TOKEN
+GITLAB_HOST="https://192.168.X.X"
+GITLAB_TOKEN="XXXXX"  # REPLACE THIS WITH YOUR TOKEN
 # --- End of Configuration ---
 
 # List of project names (from your list)
@@ -79,7 +79,7 @@ do
         PROJECT_URL=$(echo "$BODY" | jq -r '.web_url')
         PROJECT_PATH=$(echo "$BODY" | jq -r '.path_with_namespace')
         echo "   ‚úÖ SUCCESS: ${PROJECT_PATH} (ID: ${PROJECT_ID})"
-        echo "   Ì†ΩÌ¥ó URL: ${PROJECT_URL}"
+        echo "   ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ URL: ${PROJECT_URL}"
         ((SUCCESS++))
     elif [ "$HTTP_CODE" = "400" ]; then
         ERROR_MSG=$(echo "$BODY" | jq -r '.message | to_entries[0].value[0] // .message // "Unknown error"')
@@ -98,5 +98,5 @@ echo "========================================="
 echo "Summary:"
 echo "   ‚úÖ Created: ${SUCCESS}"
 echo "   ‚ùå Failed: ${FAILED}"
-echo "   Ì†ΩÌ≥ä Total: ${TOTAL}"
+echo "   ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ Total: ${TOTAL}"
 echo "========================================="
