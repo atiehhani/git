@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # --- Configuration ---
-GITLAB_HOST="https://192.168.243.9"
-GITLAB_TOKEN="glpat-k0uYhjJ7S2z9g-jgPIOAY286MQp1OjEH.01.0w1tqgt8n"  # REPLACE THIS
+GITLAB_HOST="https://192.168.X.X"
+GITLAB_TOKEN="XXXX"  # REPLACE THIS
 GROUP_ID="10"  # REPLACE WITH YOUR LOTUS GROUP ID FROM STEP 1
 # --- End of Configuration ---
 
@@ -45,7 +45,7 @@ do
         PROJECT_URL=$(echo "$RESPONSE" | jq -r '.web_url')
         PROJECT_PATH=$(echo "$RESPONSE" | jq -r '.path_with_namespace')
         echo "   ‚úÖ SUCCESS: ${PROJECT_PATH} (ID: ${PROJECT_ID})"
-        echo "   Ì†ΩÌ¥ó URL: ${PROJECT_URL}"
+        echo "   ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ URL: ${PROJECT_URL}"
         ((SUCCESS++))
     else
         ERROR_MSG=$(echo "$RESPONSE" | jq -r '.message // .error // "Unknown error"')
@@ -63,5 +63,5 @@ echo "========================================="
 echo "Summary:"
 echo "   ‚úÖ Created: ${SUCCESS}"
 echo "   ‚ùå Failed: ${FAILED}"
-echo "   Ì†ΩÌ≥ä Total: ${#PROJECTS[@]}"
+echo "   ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ Total: ${#PROJECTS[@]}"
 echo "========================================="
