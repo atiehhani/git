@@ -4,7 +4,7 @@ TOKEN="glpat-z_k3smStFg5U9-PyeKOl0G86MQp1OjEH.01.0w1un828g"
 PROJECT_ID="12"
 GITLAB_URL="http://192.168.251.219"
 
-echo "í ½í´ Finding all 'created' pipelines (including paginated results)..."
+echo "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Finding all 'created' pipelines (including paginated results)..."
 
 # Function to get all pipeline IDs with pagination
 get_all_pipeline_ids() {
@@ -51,7 +51,7 @@ if [ -z "$pipeline_ids" ] || [ "$total_count" -eq 0 ]; then
 fi
 
 echo ""
-echo "í ½í³Š Found $total_count pipelines with status 'created'"
+echo "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Found $total_count pipelines with status 'created'"
 echo ""
 echo "First 10 pipeline IDs:"
 echo "$pipeline_ids" | head -10 | while read -r id; do
@@ -71,7 +71,7 @@ if [[ $confirm != [yY] && $confirm != [yY][eE][sS] ]]; then
 fi
 
 echo ""
-echo "í ½í·‘ï¸  Deleting pipelines..."
+echo "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¸  Deleting pipelines..."
 deleted=0
 failed=0
 
