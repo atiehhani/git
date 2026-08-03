@@ -4,7 +4,7 @@
 # WARNING: This will REPLACE everything on GitLab with local files!
 
 # Configuration
-GITLAB_URL="https://192.168.243.9/usa/OV_List.git"
+GITLAB_URL="https://192.168.X.X/usa/OV_List.git"
 GITLAB_USERNAME="usa"
 GITLAB_PASSWORD="your-password-here"  # Add your password here
 LOCAL_PATH="/lotus"
@@ -30,9 +30,9 @@ fi
 
 # Add/update remote with username in URL
 if git remote | grep -q "origin"; then
-    git remote set-url origin https://${GITLAB_USERNAME}@192.168.243.9/usa/OV_List.git
+    git remote set-url origin https://${GITLAB_USERNAME}@192.168.X.X/usa/OV_List.git
 else
-    git remote add origin https://${GITLAB_USERNAME}@192.168.243.9/usa/OV_List.git
+    git remote add origin https://${GITLAB_USERNAME}@192.168.X.X/usa/OV_List.git
 fi
 
 # Add all files
@@ -45,7 +45,7 @@ git commit -m "$COMMIT_MESSAGE"
 
 # Force push to GitLab with credentials
 echo -e "${GREEN}Force pushing to GitLab...${NC}"
-git push -u origin $BRANCH --force https://${GITLAB_USERNAME}:${GITLAB_PASSWORD}@192.168.243.9/usa/OV_List.git
+git push -u origin $BRANCH --force https://${GITLAB_USERNAME}:${GITLAB_PASSWORD}@192.168.X.X/usa/OV_List.git
 
 # Check result
 if [ $? -eq 0 ]; then
