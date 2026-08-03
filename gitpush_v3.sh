@@ -5,7 +5,7 @@ GITLAB_URL="https://192.168.X.X/usa/OV_List.git"
 GITLAB_USERNAME="usa"
 #GITLAB_PASSWORD='XXXX'  # Use single quotes to avoid $ expansion
 GITLAB_TOKEN="XXXX"
-LOCAL_PATH="/root/lotus"
+LOCAL_PATH="/root/hani"
 BRANCH="master"
 COMMIT_MESSAGE="Force replace - $(date '+%Y-%m-%d %H:%M:%S')"
 
