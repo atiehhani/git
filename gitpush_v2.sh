@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Configuration
-GITLAB_URL="https://192.168.243.9/usa/OV_List.git"
+GITLAB_URL="https://192.168.X.X/usa/OV_List.git"
 GITLAB_USERNAME="usa"
-#GITLAB_PASSWORD="E$DmAp@uLCP_1404"
-GITLAB_TOKEN="glpat-WS3MdXTp6fBzbGLTkVRsJG86MQp1OjEH.01.0w1mia0g4"
+#GITLAB_PASSWORD="XXXX"
+GITLAB_TOKEN="XXXX"
 LOCAL_PATH="/root/lotus"
 BRANCH="master"
 COMMIT_MESSAGE="Force replace - $(date '+%Y-%m-%d %H:%M:%S')"
